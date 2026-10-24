@@ -1,0 +1,296 @@
+{
+  "selected_model": "Decision Tree",
+  "selection_criteria": "Composite score (0.6\u00d7Recall + 0.4\u00d7F1) \u2014 prioritizing clinical sensitivity",
+  "best_metrics": {
+    "model_name": "Decision Tree",
+    "accuracy": 0.8033,
+    "precision": 0.7333,
+    "recall": 1.0,
+    "f1_score": 0.8462,
+    "roc_auc": 0.7911,
+    "confusion_matrix": [
+      [
+        16,
+        12
+      ],
+      [
+        0,
+        33
+      ]
+    ],
+    "cv_recall_mean": 0.7855,
+    "cv_recall_std": 0.1261
+  },
+  "all_models": [
+    {
+      "model_name": "Logistic Regression",
+      "accuracy": 0.7869,
+      "precision": 0.7632,
+      "recall": 0.8788,
+      "f1_score": 0.8169,
+      "roc_auc": 0.8647,
+      "confusion_matrix": [
+        [
+          19,
+          9
+        ],
+        [
+          4,
+          29
+        ]
+      ],
+      "cv_recall_mean": 0.8855,
+      "cv_recall_std": 0.0544
+    },
+    {
+      "model_name": "Decision Tree",
+      "accuracy": 0.8033,
+      "precision": 0.7333,
+      "recall": 1.0,
+      "f1_score": 0.8462,
+      "roc_auc": 0.7911,
+      "confusion_matrix": [
+        [
+          16,
+          12
+        ],
+        [
+          0,
+          33
+        ]
+      ],
+      "cv_recall_mean": 0.7855,
+      "cv_recall_std": 0.1261
+    },
+    {
+      "model_name": "Random Forest",
+      "accuracy": 0.7705,
+      "precision": 0.7436,
+      "recall": 0.8788,
+      "f1_score": 0.8056,
+      "roc_auc": 0.9015,
+      "confusion_matrix": [
+        [
+          18,
+          10
+        ],
+        [
+          4,
+          29
+        ]
+      ],
+      "cv_recall_mean": 0.8547,
+      "cv_recall_std": 0.0788
+    },
+    {
+      "model_name": "SVM",
+      "accuracy": 0.8033,
+      "precision": 0.7561,
+      "recall": 0.9394,
+      "f1_score": 0.8378,
+      "roc_auc": 0.8723,
+      "confusion_matrix": [
+        [
+          18,
+          10
+        ],
+        [
+          2,
+          31
+        ]
+      ],
+      "cv_recall_mean": 0.8926,
+      "cv_recall_std": 0.0859
+    },
+    {
+      "model_name": "KNN",
+      "accuracy": 0.7869,
+      "precision": 0.75,
+      "recall": 0.9091,
+      "f1_score": 0.8219,
+      "roc_auc": 0.8598,
+      "confusion_matrix": [
+        [
+          18,
+          10
+        ],
+        [
+          3,
+          30
+        ]
+      ],
+      "cv_recall_mean": 0.8849,
+      "cv_recall_std": 0.0647
+    }
+  ],
+  "feature_importance": {
+    "age": 0.0398,
+    "trestbps": 0.0487,
+    "chol": 0.0173,
+    "thalach": 0.0493,
+    "oldpeak": 0.1583,
+    "sex": 0.0334,
+    "cp": 0.3915,
+    "fbs": 0.0,
+    "restecg": 0.0,
+    "exang": 0.0231,
+    "slope": 0.0165,
+    "ca": 0.1061,
+    "thal": 0.1161
+  },
+  "dataset_stats": {
+    "total_records": 302,
+    "num_features": 13,
+    "training_size": 241,
+    "testing_size": 61,
+    "target_distribution": {
+      "1": 164,
+      "0": 138
+    },
+    "age_distribution": {
+      "min": 29,
+      "max": 77,
+      "mean": 54.4,
+      "std": 9.0
+    },
+    "chol_distribution": {
+      "min": 126,
+      "max": 564,
+      "mean": 246.5,
+      "std": 51.8
+    },
+    "trestbps_distribution": {
+      "min": 94,
+      "max": 200,
+      "mean": 131.6,
+      "std": 17.6
+    },
+    "age_histogram": [
+      {
+        "bin": "29-33",
+        "count": 1
+      },
+      {
+        "bin": "33-38",
+        "count": 10
+      },
+      {
+        "bin": "38-43",
+        "count": 33
+      },
+      {
+        "bin": "43-48",
+        "count": 38
+      },
+      {
+        "bin": "48-53",
+        "count": 37
+      },
+      {
+        "bin": "53-57",
+        "count": 60
+      },
+      {
+        "bin": "57-62",
+        "count": 63
+      },
+      {
+        "bin": "62-67",
+        "count": 43
+      },
+      {
+        "bin": "67-72",
+        "count": 14
+      },
+      {
+        "bin": "72-77",
+        "count": 3
+      }
+    ],
+    "chol_histogram": [
+      {
+        "bin": "126-169",
+        "count": 12
+      },
+      {
+        "bin": "169-213",
+        "count": 72
+      },
+      {
+        "bin": "213-257",
+        "count": 106
+      },
+      {
+        "bin": "257-301",
+        "count": 69
+      },
+      {
+        "bin": "301-345",
+        "count": 35
+      },
+      {
+        "bin": "345-388",
+        "count": 3
+      },
+      {
+        "bin": "388-432",
+        "count": 4
+      },
+      {
+        "bin": "432-476",
+        "count": 0
+      },
+      {
+        "bin": "476-520",
+        "count": 0
+      },
+      {
+        "bin": "520-564",
+        "count": 1
+      }
+    ],
+    "trestbps_histogram": [
+      {
+        "bin": "94-104",
+        "count": 10
+      },
+      {
+        "bin": "104-115",
+        "count": 42
+      },
+      {
+        "bin": "115-125",
+        "count": 67
+      },
+      {
+        "bin": "125-136",
+        "count": 74
+      },
+      {
+        "bin": "136-147",
+        "count": 56
+      },
+      {
+        "bin": "147-157",
+        "count": 27
+      },
+      {
+        "bin": "157-168",
+        "count": 13
+      },
+      {
+        "bin": "168-178",
+        "count": 8
+      },
+      {
+        "bin": "178-189",
+        "count": 3
+      },
+      {
+        "bin": "189-200",
+        "count": 2
+      }
+    ]
+  },
+  "disclaimer": "This model is an educational project and has NOT been clinically validated. Do not use predictions for medical decisions."
+}

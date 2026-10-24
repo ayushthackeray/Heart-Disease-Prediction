@@ -1,0 +1,328 @@
+@import "tailwindcss";
+
+/* ============================================
+   CardioPredict AI — Design System
+   Clean healthcare dashboard with dark navy & teal
+   ============================================ */
+
+@theme {
+  --color-navy-50: #f0f4f8;
+  --color-navy-100: #d9e2ec;
+  --color-navy-200: #bcccdc;
+  --color-navy-300: #9fb3c8;
+  --color-navy-400: #829ab1;
+  --color-navy-500: #627d98;
+  --color-navy-600: #486581;
+  --color-navy-700: #334e68;
+  --color-navy-800: #243b53;
+  --color-navy-900: #102a43;
+  --color-navy-950: #0a1929;
+
+  --color-teal-50: #e6fffa;
+  --color-teal-100: #b2f5ea;
+  --color-teal-200: #81e6d9;
+  --color-teal-300: #4fd1c5;
+  --color-teal-400: #38b2ac;
+  --color-teal-500: #319795;
+  --color-teal-600: #2c7a7b;
+  --color-teal-700: #285e61;
+  --color-teal-800: #234e52;
+  --color-teal-900: #1d4044;
+
+  --color-risk-low: #38a169;
+  --color-risk-medium: #d69e2e;
+  --color-risk-high: #e53e3e;
+
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Google Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-navy-50);
+  color: var(--color-navy-900);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-navy-100);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-navy-400);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-navy-500);
+}
+
+/* Card component */
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(16, 42, 67, 0.08), 0 1px 2px rgba(16, 42, 67, 0.06);
+  border: 1px solid var(--color-navy-100);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 12px rgba(16, 42, 67, 0.1), 0 2px 4px rgba(16, 42, 67, 0.06);
+}
+
+/* Stat card */
+.stat-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.25rem;
+  border: 1px solid var(--color-navy-100);
+  box-shadow: 0 1px 3px rgba(16, 42, 67, 0.06);
+  transition: all 0.2s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(16, 42, 67, 0.1);
+}
+
+/* Gradient header */
+.gradient-header {
+  background: linear-gradient(135deg, var(--color-navy-900) 0%, var(--color-navy-700) 50%, var(--color-teal-700) 100%);
+}
+
+/* Sidebar */
+.sidebar {
+  background: var(--color-navy-900);
+  color: white;
+  transition: width 0.3s ease;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  color: var(--color-navy-300);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.sidebar-link:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+}
+
+.sidebar-link.active {
+  background: linear-gradient(135deg, var(--color-teal-600), var(--color-teal-700));
+  color: white;
+  box-shadow: 0 2px 8px rgba(49, 151, 149, 0.3);
+}
+
+/* Buttons */
+.btn-primary {
+  background: linear-gradient(135deg, var(--color-teal-500), var(--color-teal-600));
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.95rem;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, var(--color-teal-600), var(--color-teal-700));
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(49, 151, 149, 0.3);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-secondary {
+  background: white;
+  color: var(--color-navy-700);
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--color-navy-200);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.95rem;
+}
+
+.btn-secondary:hover {
+  background: var(--color-navy-50);
+  border-color: var(--color-navy-300);
+}
+
+/* Form inputs */
+.form-input {
+  width: 100%;
+  padding: 0.65rem 0.875rem;
+  border: 1.5px solid var(--color-navy-200);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: var(--color-navy-900);
+  background: white;
+  transition: all 0.2s ease;
+  font-family: var(--font-sans);
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--color-teal-400);
+  box-shadow: 0 0 0 3px rgba(49, 151, 149, 0.15);
+}
+
+.form-input.error {
+  border-color: var(--color-risk-high);
+  box-shadow: 0 0 0 3px rgba(229, 62, 62, 0.1);
+}
+
+.form-label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-navy-700);
+  margin-bottom: 0.35rem;
+}
+
+.form-error {
+  font-size: 0.8rem;
+  color: var(--color-risk-high);
+  margin-top: 0.25rem;
+}
+
+.form-hint {
+  font-size: 0.78rem;
+  color: var(--color-navy-500);
+  margin-top: 0.2rem;
+}
+
+/* Risk indicator */
+.risk-indicator {
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.risk-low {
+  background: linear-gradient(135deg, #c6f6d5, #f0fff4);
+  color: #22543d;
+  border: 2px solid #9ae6b4;
+}
+
+.risk-high {
+  background: linear-gradient(135deg, #fed7d7, #fff5f5);
+  color: #742a2a;
+  border: 2px solid #fc8181;
+}
+
+/* Loading spinner */
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--color-navy-200);
+  border-top-color: var(--color-teal-500);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Pulse animation for live indicator */
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-teal-400);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.2); }
+}
+
+/* Disclaimer banner */
+.disclaimer-banner {
+  background: linear-gradient(135deg, #fefcbf, #fffff0);
+  border: 1px solid #f6e05e;
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  font-size: 0.85rem;
+  color: #744210;
+  line-height: 1.5;
+}
+
+/* Chart container */
+.chart-container {
+  background: white;
+  border-radius: 12px;
+  padding: 1.25rem;
+  border: 1px solid var(--color-navy-100);
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: flex;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-nav {
+    display: none;
+  }
+}
+
+/* Page transitions */
+.page-enter {
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+.page-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}

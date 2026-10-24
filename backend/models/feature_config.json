@@ -1,0 +1,162 @@
+{
+  "features": {
+    "age": {
+      "label": "Age",
+      "type": "numerical",
+      "description": "Age in years",
+      "min": 1,
+      "max": 120,
+      "unit": "years"
+    },
+    "sex": {
+      "label": "Sex",
+      "type": "categorical",
+      "description": "Biological sex",
+      "categories": {
+        "0": "Female",
+        "1": "Male"
+      }
+    },
+    "cp": {
+      "label": "Chest Pain Type",
+      "type": "categorical",
+      "description": "Type of chest pain experienced",
+      "categories": {
+        "0": "Typical Angina",
+        "1": "Atypical Angina",
+        "2": "Non-Anginal Pain",
+        "3": "Asymptomatic"
+      }
+    },
+    "trestbps": {
+      "label": "Resting Blood Pressure",
+      "type": "numerical",
+      "description": "Resting blood pressure on admission (mm Hg)",
+      "min": 50,
+      "max": 250,
+      "unit": "mm Hg"
+    },
+    "chol": {
+      "label": "Serum Cholesterol",
+      "type": "numerical",
+      "description": "Serum cholesterol level (mg/dl)",
+      "min": 50,
+      "max": 600,
+      "unit": "mg/dl"
+    },
+    "fbs": {
+      "label": "Fasting Blood Sugar > 120 mg/dl",
+      "type": "categorical",
+      "description": "Whether fasting blood sugar is greater than 120 mg/dl",
+      "categories": {
+        "0": "No (\u2264 120 mg/dl)",
+        "1": "Yes (> 120 mg/dl)"
+      }
+    },
+    "restecg": {
+      "label": "Resting ECG Results",
+      "type": "categorical",
+      "description": "Resting electrocardiographic results",
+      "categories": {
+        "0": "Normal",
+        "1": "ST-T Wave Abnormality",
+        "2": "Left Ventricular Hypertrophy"
+      }
+    },
+    "thalach": {
+      "label": "Maximum Heart Rate Achieved",
+      "type": "numerical",
+      "description": "Maximum heart rate achieved during exercise test",
+      "min": 50,
+      "max": 250,
+      "unit": "bpm"
+    },
+    "exang": {
+      "label": "Exercise-Induced Angina",
+      "type": "categorical",
+      "description": "Whether exercise induced angina",
+      "categories": {
+        "0": "No",
+        "1": "Yes"
+      }
+    },
+    "oldpeak": {
+      "label": "ST Depression (Oldpeak)",
+      "type": "numerical",
+      "description": "ST depression induced by exercise relative to rest",
+      "min": 0.0,
+      "max": 10.0,
+      "unit": "",
+      "step": 0.1
+    },
+    "slope": {
+      "label": "Slope of Peak Exercise ST Segment",
+      "type": "categorical",
+      "description": "Slope of the peak exercise ST segment",
+      "categories": {
+        "0": "Upsloping",
+        "1": "Flat",
+        "2": "Downsloping"
+      }
+    },
+    "ca": {
+      "label": "Number of Major Vessels",
+      "type": "categorical",
+      "description": "Number of major vessels colored by fluoroscopy",
+      "categories": {
+        "0": "0",
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4"
+      }
+    },
+    "thal": {
+      "label": "Thalassemia",
+      "type": "categorical",
+      "description": "Thalassemia blood disorder status",
+      "categories": {
+        "0": "Normal",
+        "1": "Fixed Defect",
+        "2": "Reversible Defect"
+      }
+    }
+  },
+  "feature_order": [
+    "age",
+    "sex",
+    "cp",
+    "trestbps",
+    "chol",
+    "fbs",
+    "restecg",
+    "thalach",
+    "exang",
+    "oldpeak",
+    "slope",
+    "ca",
+    "thal"
+  ],
+  "target_column": "target",
+  "target_labels": {
+    "0": "No Heart Disease",
+    "1": "Heart Disease Detected"
+  },
+  "numerical_features": [
+    "age",
+    "trestbps",
+    "chol",
+    "thalach",
+    "oldpeak"
+  ],
+  "categorical_features": [
+    "sex",
+    "cp",
+    "fbs",
+    "restecg",
+    "exang",
+    "slope",
+    "ca",
+    "thal"
+  ]
+}
