@@ -3,7 +3,7 @@
  * All API calls go through this module for consistency.
  */
 
-const API_BASE = '';  // Uses Vite proxy in development
+const API_BASE = import.meta.env.VITE_API_URL || '';
 
 async function apiRequest(endpoint, options = {}) {
   const url = `${API_BASE}${endpoint}`;
